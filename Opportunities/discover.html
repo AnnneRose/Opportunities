@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+ 
+ 
+<head>
+  <title>Table</title>
+ 
+ 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="discover.css">
+  <script src="script.js">
+  </script>
+</head>
+ 
+<body>
+  <nav>
+    <div class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Find high school internships</a>
+      <a href="resume.html">Resume and CV Template</a>
+ 
+    </div>
+  </nav>
+ 
+  <h2>Add a High School Internship Listing</h2>
+  <form>
+    <table id="input-table">
+      <thead>
+        <tr>
+          <th>Internship name</th>
+          <td><input type="text" name="fname" id="fname" required></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Internship location</th>
+          <td><input type="name" name="lname" id="lname" required></td>
+        </tr>
+        <tr>
+          <th>Internship category</th>
+          <td><input type="text" name="email" id="email" required></td>
+        </tr>
+ 
+        <tr>
+          <th>Internship link</th>
+          <td><input type="text" name="age" id="age" required></td>
+        </tr>
+ 
+        <tr id="btna">
+          <td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="onSubmit()"></td>
+        </tr>
+      </tbody>
+    </table>
+</form>
+ 
+    <table id="show" style="padding:30px; width:90%;" class="internshipInfo">
+ 
+ 
+      <thead>
+ 
+ 
+        <tr>
+ 
+ 
+          <th>Internship name</th>
+ 
+ 
+          <th>Internship location</th>
+ 
+ 
+          <th>Internship category</th>
+ 
+ 
+          <th>Internship link</th>
+ 
+ 
+        </tr>
+ 
+ 
+      </thead>
+ 
+ 
+    </table>
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  <script>
+ 
+ 
+    
+ 
+ 
+    var list1 = [];
+ 
+ 
+    var list2 = [];
+ 
+ 
+    var list3 = [];
+ 
+ 
+    var list4 = [];
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    var n = 1;
+ 
+ 
+    var x = 0;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    function AddRow(data1,data2,data3,data4){
+      var AddRown = document.getElementById('show');
+      var NewRow = AddRown.insertRow(n);
+ 
+      list1[x] = data1;
+ 
+      list2[x] = data2;
+ 
+      list3[x] = data3;
+ 
+      list4[x] = data4;
+ 
+ 
+    if(list1[x]== "" ||list3[x]== ""||list4[x]== ""||list2[x]== ""){
+    }else{
+ 
+ 
+ 
+      var cel1 = NewRow.insertCell(0);
+ 
+ 
+      var cel2 = NewRow.insertCell(1);
+ 
+ 
+      var cel3 = NewRow.insertCell(2);
+ 
+ 
+      var cel4 = NewRow.insertCell(3);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      cel1.innerHTML = list1[x];
+ 
+ 
+      cel2.innerHTML = list2[x];
+ 
+ 
+      cel3.innerHTML = list3[x];
+ 
+ 
+      cel4.innerHTML = list4[x];
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      n++;
+ 
+ 
+      x++;
+   }
+ 
+    }
+ 
+ 
+  async function onPageLoad() {
+    let data = await fetch("https://db.neelr.dev/api/6912ef27259834e665455b74d2f5ae43");
+    let internships = await data.json()
+    Object.values(internships).forEach(v => AddRow(v.name, v.location, v.category,v.link ))
+  }
+  onPageLoad()
+ 
+ 
+  </script>
+ 
+ 
+</body>
+ 
+ 
+</html>
+

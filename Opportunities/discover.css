@@ -1,0 +1,37 @@
+input#btn {
+  padding: 5px 50px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#input-table{
+  text-align: left;
+  cursor: initial;
+}
+
+#btna{
+  text-align: center;
+}
+
+
+#btn{
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color:#47b5f5;
+  box-shadow: 2px 7px #999;
+}
+#btn:active{
+  box-shadow: 2px 3px #666;
+  background-color: #60c3fc;
+  transform: translateY(4px);
+}
+
+#btn:hover{
+  background-color: #60c3fc;
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f7ba0c;
+}
+nav{
+  background-color: #D25859;
+    text-align:center;
+
+}
+
+img{
+  padding:20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+header input:checked ~ nav > .nav {
+  width: 11em;
+  opacity: 10;
+}
+.nav {
+  width: 11em;
+  opacity: 10;
+    
+  position: absolute;
+  top: 0;
+  left: 2.9em;
+  margin: 0;
+  padding: 0;
+ 
+  list-style-type: none;
+
+  overflow: hidden;
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.nav a {
+  display: block;
+  padding: .85em 0;
+  width: 11em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.discover-bar {
+   text-align: center;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.name {
+  text-align:center;
+  font-size: 30px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+table{
+  text-align: center;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+.body{
+ text-align: center;
+}
+
+
+.nav-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.nav-bar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 33.33%;
+  text-align: center;
+}
+
+.nav-bar a:hover {
+  background-color: #1111117c;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .nav-bar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+h1 {
+  margin-top:20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.internshipInfo th{
+  padding: 18px;
+  font-size: 20px;
+}
+td{
+  padding: 5px;
+}
+
+p{
+  text-align: center;
+}
+
+.internshipInfo td{
+  padding: 10px;
+}
+
+
+.internshipInfo tr:nth-child(even) { 
+  background-color: #47b5f5	
+;
+}
+.internshipInfo tr:nth-child(odd) { 
+  background-color: #47b5f5	
+;
+}
+.internshipInfo tr:nth-child(1) { 
+  background-color: #D25859	
+;
+}
+.internshipInfo{
+  color: white;
+}
+
+.internshipInfo th:first-child{
+  border-top-left-radius: 20px;
+}
+.internshipInfo th:nth-child(4){
+  border-top-right-radius: 20px;
+}
+
+.internshipInfo tr:hover td {
+  background-color: #60c3fc	
+
+}
+h2{
+  text-align: center;
+}
